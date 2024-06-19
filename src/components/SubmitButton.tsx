@@ -7,9 +7,8 @@ export default function SubmitButton() {
     <button
       type="submit"
       {...(pending && { disabled: true })}
-      className={`bg-blue-400 h-10 w-62 p-2 mt-10 rounded text-white font-bold ${
-        pending ? "cursor-not-allowed" : "cursor-pointer"
-      }`}
+      className={`bg-violet-400 h-10 w-62 p-2 mt-10 rounded text-white font-bold shadow-md shadow-white 
+          hover:bg-violet-500 hover:shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1`}
     >
       {pending ? "Adding..." : "Add Todo"}
     </button>

@@ -10,12 +10,13 @@ export default async function GetTodos() {
         <h1 className="text-red-400 font-bold text-xl">You have no todos</h1>
       );
     } else {
+      // Function to convert the deadline string to a formatted date string
       const deadLineToDate = (todoDeadline: any) => {
         const deadlineDate = new Date(todoDeadline);
 
         // Extracting day, month, and year components from the Date object
         const day = deadlineDate.getDate();
-        const month = deadlineDate.getMonth() + 1; // Months are zero-based, so add 1
+        const month = deadlineDate.getMonth() + 1; // Months are zero-based
         const year = deadlineDate.getFullYear();
 
         // Formatting the date as MM/DD/YYYY
