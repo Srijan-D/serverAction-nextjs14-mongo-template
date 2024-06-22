@@ -32,10 +32,11 @@ export default function Forms() {
           Deadline
         </label>
         <input
-          type="text"
+          type="date"
           name="todoDeadline"
           className="w-62 h-10 p-2 text-black"
         />
+        <input type="time" name="time" className="w-62 h-10 p-2 text-black" />
         <button type="submit" className="">
           <SubmitButton />
         </button>

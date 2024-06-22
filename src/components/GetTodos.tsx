@@ -38,6 +38,7 @@ export default async function GetTodos() {
               <div className="flex flex-col gap-2 justify-center items-center ">
                 <h3>{todo.todo as string}</h3>
                 <p>{deadLineToDate(todo.todoDeadline)}</p>
+                <p>{todo.time.toString()}</p>
               </div>
               <form action={deleteTodo}>
                 <input

@@ -7,7 +7,6 @@ export interface IProduct {
   name: string;
 }
 
-// Merging ITodo interface with mongoose's Document interface to create
 // a new interface that represents a todo document in MongoDB
 export interface IProductDocument extends IProduct, Document {
   createdAt: Date;
@@ -16,7 +15,7 @@ export interface IProductDocument extends IProduct, Document {
 
 // Defining a mongoose schema for the todo document, specifying the types
 // and constraints
-const todoSchema = new mongoose.Schema<IProductDocument>(
+const productSchema = new mongoose.Schema<IProductDocument>(
   {
     id: {
       type: Number,
@@ -34,7 +33,7 @@ const todoSchema = new mongoose.Schema<IProductDocument>(
 );
 
 // Creating a mongoose model for the todo document
-const Todo: Model<ITodoDocument> =
-  mongoose.models?.Todo || mongoose.model("Todo", todoSchema);
+const Todo: Model<IProductDocument> =
+  mongoose.models?.Todo || mongoose.model("Todo", productSchema);
 
 export default Todo;

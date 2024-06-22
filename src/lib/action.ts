@@ -8,11 +8,14 @@ export const createTodos = async (formData: FormData) => {
   // Extracting todo content and time from formData
   const todo = formData.get("todo");
   const todoDeadline = formData.get("todoDeadline");
+  const time = formData.get("time");
+
   try {
     // Creating a new todo using Todo model
     const newTodo = await Todo.create({
       todo,
       todoDeadline,
+      time,
     });
     // Saving the new todo
     newTodo.save();

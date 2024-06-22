@@ -4,7 +4,9 @@ import mongoose, { Document, Model } from "mongoose";
 // Defining the structure of a todo item using TypeScript interfaces
 export interface ITodo {
   todo: string;
-  todoDeadline: number;
+  todoDeadline: Date;
+  time: string;
+  //time only has hours and mins so cannot be a date type
 }
 
 // Merging ITodo interface with mongoose's Document interface to create
@@ -23,7 +25,11 @@ const todoSchema = new mongoose.Schema<ITodoDocument>(
       required: true,
     },
     todoDeadline: {
-      type: Number,
+      type: Date,
+      required: true,
+    },
+    time: {
+      type: String,
       required: true,
     },
   },
