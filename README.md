@@ -36,7 +36,7 @@ This is a Next.js project bootstrapped with the latest Next.js 14, utilizing ser
 1. Clone the repository:
 
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/Srijan-D/serverAction-nextjs14-mongo-template
    ```
 
 2. Navigate to the project directory:
@@ -121,7 +121,3 @@ This is a Next.js project bootstrapped with the latest Next.js 14, utilizing ser
     }
   };
   ```
-
-```
-
-```
